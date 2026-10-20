@@ -33,5 +33,6 @@ create policy "Enable read access for all users" on public.bookings
 
 insert into public.services (id, name, minutes, prices) values
   ('nails', 'Nail trim', 30, '{"small": 20, "medium": 20, "large": 25}'),
+  ('teeth', 'Teeth cleaning', 30, '{"small": 15, "medium": 15, "large": 20}'),
   ('bath', 'Bath and brush', 60, '{"small": 55, "medium": 70, "large": 85}'),
   ('groom', 'Full groom (bath, haircut, nails)', 120, '{"small": 75, "medium": 95, "large": 120}');

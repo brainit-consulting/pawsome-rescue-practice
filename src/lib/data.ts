@@ -1,6 +1,7 @@
 import { supabase, isConnected } from "@/integrations/supabase/client";
 import { supabaseAdmin } from "@/integrations/supabase/admin";
 import type { BookingForm, DogSize } from "./booking-form";
+import { openSlots } from "./slots";
 
 export type Service = { id: string; name: string; minutes: number; prices: Record<DogSize, number> };
 export type Booking = {
@@ -42,13 +43,10 @@ export async function listServices(): Promise<Service[]> {
 
 /** Open start times for the next working day: Tuesday to Saturday, 8 am to 5 pm, on the hour */
 export async function listOpenSlots(): Promise<string[]> {
-  const taken = new Set((await listAllBookings()).map((b) => b.starts_at));
-  const slots: string[] = [];
-  for (let hour = 8; hour < 17; hour++) {
-    const s = nextWeekday(hour);
-    if (!taken.has(s)) slots.push(s);
-  }
-  return slots;
+  const taken = (await listAllBookings()).map((b) => b.starts_at);
+  const candidates: string[] = [];
+  for (let hour = 8; hour < 17; hour++) candidates.push(nextWeekday(hour));
+  return openSlots(candidates, taken);
 }
 
 export async function createBooking(form: BookingForm): Promise<void> {
