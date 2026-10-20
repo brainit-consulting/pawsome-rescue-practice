@@ -22,5 +22,5 @@ npm install
 npm run dev
 ```
 
-Then open http://localhost:8080. Until you connect your own Supabase project (course 2, lesson 7), the app runs on
+Then open the address Vite prints (usually http://localhost:8080; if something else uses that port, Vite picks the next one). Until you connect your own Supabase project (course 2, lesson 7), the app runs on
 built-in sample data.
