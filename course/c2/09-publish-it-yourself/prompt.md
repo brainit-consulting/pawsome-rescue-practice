@@ -1,0 +1,1 @@
+I'm about to publish this app on Vercel. Check that the build and the tests pass, fix anything that stops them, and tell me exactly which environment variables Vercel needs (the names only, not the values). When it works, commit with a clear message and push.

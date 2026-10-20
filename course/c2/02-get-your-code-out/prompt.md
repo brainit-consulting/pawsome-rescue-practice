@@ -1,0 +1,1 @@
+This folder is the practice app I just downloaded. Turn it into a Git project with everything saved as it is now, then use the GitHub CLI (gh) to create a private repository called pawsome-rescue from it and push everything. Tell me its web address. When it works, commit with a clear message and push.

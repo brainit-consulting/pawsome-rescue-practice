@@ -1,0 +1,1 @@
+Install this app's packages and start it, then open it in the Browser pane. Don't change any files. Then tell me in plain words what the app does, and what it connects to: which online services, which keys, and whether this copy on my computer reads and writes the same live data as the published app.
