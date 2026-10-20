@@ -15,7 +15,7 @@ works like a booking app made with an AI app builder, and it's stuck in the ways
 
 ## Run it
 
-You need [Node.js](https://nodejs.org) 22 or later. In this folder:
+You need [Node.js](https://nodejs.org) 24 LTS (it comes with npm 11; npm 10 fails to install this app). In this folder:
 
 ```
 npm install
